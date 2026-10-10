@@ -1,0 +1,465 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>TCG</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<style>
+			.steps-slideshow-row {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 2rem;
+				align-items: start;
+				margin-top: 3em;
+			}
+
+			.steps-slideshow h3 {
+				min-height: 2em;
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				text-align: center;
+				margin-bottom: 0.75em;
+			}
+
+			.steps-page-image {
+				max-width: 5rem;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.steps-page-image img {
+				max-height: 4em;
+				object-fit: contain;
+			}
+
+			.steps-slideshow-frame {
+				position: relative;
+				overflow: hidden;
+				border-radius: 0.35em;
+				margin: 0 0 1em 0;
+				max-width: 34rem;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.steps-slideshow-track {
+				display: flex;
+				transition: transform 0.45s ease;
+				will-change: transform;
+			}
+
+			.steps-slide {
+				min-width: 100%;
+				flex: 0 0 100%;
+			}
+
+			.steps-slide img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+
+			.steps-arrow {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				max-width: 3rem;
+				min-width: 30px;
+				font-size: 2rem;
+				padding: 0 !important;
+				max-height: 4.5rem;
+				border: 0;
+				background: rgba(255, 181, 244, 0.35) !important;
+				color: #ffffff !important;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: 900;
+				line-height: 1;
+				letter-spacing: 0;
+				text-indent: 0;
+				text-transform: none;
+				white-space: normal;
+				z-index: 2;
+				box-shadow: none;
+				backdrop-filter: none;
+				text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+				opacity: 1 !important;
+			}
+
+			.steps-arrow:hover {
+				background: transparent !important;
+				color: #ffffff !important;
+				opacity: 1 !important;
+			}
+
+			.steps-arrow.prev {
+				left: 1rem;
+			}
+
+			.steps-arrow.next {
+				right: 1rem;
+			}
+
+			.steps-slideshow-controls {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 0.75em;
+			}
+
+			.steps-slideshow-controls .slide-status {
+				font-size: 0.9em;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+			}
+
+			.steps-section-heading {
+				font-size: 1.9em;
+				margin-bottom: 0.6em;
+			}
+			
+			.steps-contents {
+				margin-bottom: 2em;
+			}
+
+			.steps-contents + .steps-section-heading,
+			.steps-section-heading + p,
+			.steps-process-lead,
+			.steps-results-row {
+				margin-top: 0;
+			}
+
+			.steps-process-lead {
+				margin-bottom: 1.5em;
+			}
+
+			.steps-iteration-intro {
+				margin-bottom: 1.75em;
+			}
+
+			.steps-slideshow-row {
+				margin-bottom: 1.5em;
+			}
+
+			.steps-color-intro {
+				margin-top: 0;
+				margin-bottom: 1.75em;
+			}
+
+			.steps-results-row {
+				margin-bottom: 0;
+			}
+
+			@media screen and (max-width: 800px) {
+				.steps-slideshow-row {
+					grid-template-columns: 1fr;
+					gap: 1.5rem;
+				}
+
+				.steps-arrow {
+					width: 5rem !important;
+					min-width: 3rem !important;
+					height: 5rem;
+					font-size: 5rem !important;
+				}
+
+				.steps-arrow.prev {
+					left: 2rem;
+				}
+
+				.steps-arrow.next {
+					right: 2rem;
+				}
+			}
+		</style>
+	</head>
+
+	<body class="is-preload interior-page tcg-page">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="../index.html" class="logo">
+									<span class="symbol"><img src="../images/eye.svg" alt="" /></span><span class="title">Emily Chae</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul>
+							<li><a href="../about/about.html">About Me</a></li>
+							<li><a href="../tcg/tcg.html">Pokemon Pocket TCG</a></li>
+							<li><a href="../bat/bat.html">Bat Posters</a></li>
+							<li><a href="../bello/bello.html">bello</a></li>
+							<li><a href="../podcast/podcast.html">Podcast Rebrand</a></li>
+							<li><a href="../brand/brand.html">Personal Brand</a></li>
+							<li><a href="../begal/begal.html">Begal</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+						<h1>Pokemon Pocket TCG</h1>
+						<span class="image main"><img src="tcg.jpg" alt="" /></span>
+							
+						<h2 class="contents">Contents</h2>
+						<ul class="cons">
+							<li><a href="#task">Overview</a></li>
+							<li><a href="#process">Research</a></li>
+							<li><a href="#design">Design</a></li>
+							<li><a href="#evaluate">Evaluate</a></li>
+							<li><a href="#outcome">Outcome</a></li>
+						</ul>
+					</div>	
+					
+					
+					<div class="inner overview-details">
+						<div id="sep"></div>
+						<div id="overview">
+							<h2>Overview</h2>
+							<h3>Problem:</h3>
+								<p> There are three major UX problems in PTCGP:<br>
+								1. The majority of TCG players complain about the slow user interface that requires too many screens per action. <br>
+								2. After playing for two weeks I realize there are intervals between ranked seasons with nothing to do, as tallying results takes weeks. TCG Events include new set releases based on the game generations and line up with previous key milestones of net IAP revenue for Pokémon TCG Pocket, according to AppMagic. For example, according to PocketGamer.biz, on Pokemon Day, the day the new Paldean Wonders set was released in TCG Pocket, the game earned $4.7 million on this single day, up 57% from the day prior and 486% compared to one week earlier.<br>
+								3. The friends feature is too convoluted. There is no way to scroll down to the bottom of the screen, favorite certain friends, or look up . The user has to manually go into the friend’s profile to see what their wishlisted is and how many copies of the cards they have, when this function could easily be incorporated to maximize the amount of interaction between players.</p>
+							<h3>Solution</h3>
+								<p>From a technical standpoint minimize the screens per action, increase long-term missions that incentivize players to play even when there is no new event or between seasons, and redesign the entire Social Hub.
+								Creative solutions include a storyline function to replace the current solo random matches OR an increased amount of available missions, either increased difficulty scales or number. Currently, you get two free draws per day and a daily log in bonus that takes a minimum of five screens to sit through. The missions are too quick to complete and never vary in type. 
+								There are fan-hosted tournaments that provide bonuses for building solid decks but not ones by the company. There is a possibility to introduce official virtual tournaments just like the TCG but virtually, and include prizes, limited edition items and an option to join these matches by passing prelimitations.
+
+								Furthermore, to incentivize players to buy in-game currencies provide a valuable, limited-edition reward for completing a set (a huge milestone). Examples include a special profile picture, card, or hourglasses. 
+								On a side note, many people miss the Sneak Peek feature in Wonder picks as it helped them grab high value cards. A substitute to the pity system could be a more expensive pack option that guarantees a certain rarity card.</p>
+							
+								<div class="steps-slideshow-row">
+									<div class="steps-slideshow" data-slideshow>
+										<h3> Previous Steps</h3>
+										<div class="steps-slideshow-frame">
+											<button type="button" class="steps-arrow prev" data-slide-prev aria-label="Previous step">&#8249;</button>
+											<div class="steps-slideshow-track" data-slide-track>
+												<div class="steps-slide"><img src="steps/pcg1.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg2.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg2.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg2.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg3.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg4.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg5.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg6.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg7.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg3.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg4.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg5.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg6.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg7.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg3.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg4.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg5.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg6.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg7.jpg"></div>
+											</div>
+
+											<button type="button" class="steps-arrow next" data-slide-next aria-label="Next step">&#8250;</button>
+										</div>
+											<div class="steps-slideshow-controls">
+												<span class="slide-status" data-slide-status>1 / 18</span>
+											</div>
+										</div>
+
+										<div class="steps-slideshow" data-slideshow>
+										<h3> New Steps</h3>
+										
+										<div class="steps-slideshow-frame">
+											<button type="button" class="steps-arrow prev" data-slide-prev aria-label="Previous step">&#8249;</button>
+											
+											<div class="steps-slideshow-track" data-slide-track>
+												<div class="steps-slide"><img src="steps/pcg1.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg3.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg4.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg55.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg66.jpg"></div>
+												<div class="steps-slide"><img src="steps/pcg7.jpg"></div>
+											</div>
+
+											<button type="button" class="steps-arrow next" data-slide-next aria-label="Next step">&#8250;</button>
+										</div>
+
+											<div class="steps-slideshow-controls">
+												<span class="slide-status" data-slide-status>1 / 6</span>
+											</div>
+										</div>
+								</div>
+						</div>
+						<div id="details">
+							<h2>Details</h2>
+							<h3>Role</h3>
+								<p>UX Designer, UX Researcher</p>
+							<h3>Timeline</h3>
+								<p>February 21st - Present.</p>
+							<h3>Tools</h3>
+								<p>Figma, Miro.</p>
+						</div>	
+					</div>
+					
+					<div class="inner">
+						<div class="sep"></div>
+						<h2 id="research">Research</h2>
+							<h3>Expert Interview</h3>
+								<p>I reviewed feedback from experienced TCG players who regularly compare PTCGP to both physical Pokemon events and other digital card games.</p>
+							<h3>Competitive Analysis</h3>
+								<p>I compared PTCGP with live-service card games that keep players engaged through rotating missions, ranked events, and meaningful reward loops. The comparison showed that stronger progression systems and clearer event incentives could make PTCGP feel more active without overwhelming casual players.</p>
+						<h3>User Interviews</h3>
+							<p>User interviews highlighted two core frustrations: They consistently pointed to the dysfunctional UI requiring too many taps especially for routine actions, and limited reasons to return between set drops or ranked seasons.
+							Players wanted faster navigation, more varied missions, and more ways to interact with the collection they are building.<br>
+							"The amount of clicks/presses needed to conclude every single action, from opening packs, to wonder picking, to trading, to organizing decks is mind numbing."<br>
+							"With animations on top of this, you have to go through so freaking many press-button-to-confirm menus as well... I'm spending more time in loading limbo than actually playing the damn game because it's a 12 step process to claim a single card."<br>
+							"It's the reason i'm playing less and less time, I don't even want to open the game knowing that 2/3 (exagerating on purpose) of my time are loading screens."</p>
+						<h3>Personas</h3>
+							<p>I created personas for casual collectors, daily grinders, and competitive-minded players. Each persona helped frame how different users would value features like streamlined pack opening, limited-time tournaments, and better long-term goals between expansions.</p>
+							<div id="personas">
+								<img src="trey.jpg">
+								<img src="kenny.jpg">
+								<img src="dani.jpg">
+							</div>
+					</div>
+
+					<div class="inner">
+						<div class="sep"></div>						
+						<h2 id="design">Design</h2>
+							<h3>Storyboards</h3>
+								<p>Storyboards mapped how a player might move from opening the app to claiming rewards, joining an event, and opening packs. This helped identify moments where the current experience loses momentum and where a more satisfying loop could be introduced.</p>
+							<h3>Sketching/Lo-fi Prototyping</h3>
+								<p>Low-fidelity sketches explored simpler layouts for the home screen, missions, and event entry points. My design iterations focused on reducing unnecessary screens and making key actions feel faster. Early concepts explored condensed menu paths, clearer event access points, and more visible mission progress so players could immediately see what to do next.</p>
+							<h3>Information Architecture</h3>
+								<p>I reorganized the information architecture around the actions players care about most: collecting, battling, completing missions, and participating in events. Grouping these functions more clearly supports faster decision-making and less menu fatigue.</p>
+							<h3>Interactive Prototypes</h3>
+								<p>Interactive prototypes tested shortened user flows for daily play, event discovery, and special pack options. These prototypes made it easier to evaluate whether the redesigned experience felt more rewarding and easier to navigate than the current version.</p>
+					</div>
+					
+					<div class="inner">
+						<div class="sep"></div>	
+						<h2 id="evaluate">Evaluate</h2>
+							<h3>Usability Testing</h3>
+								<p>Usability testing focused on how quickly players could find events, understand missions, and complete repeat actions. Test participants generally responded well to the reduced number of screens and the clearer placement of progression-related features.</p>
+							<h3>User Feedback</h3>
+								<p>Feedback suggested that players were most excited by features that added purpose between expansion releases. Tournament support, better rewards, and more meaningful daily engagement were seen as the strongest improvements to the overall concept.</p>
+							<h3>Questionnaires</h3>
+								<p>Post-test questionnaires measured perceived clarity, satisfaction, and ease of use. Responses showed that participants understood the redesigned structure more quickly and felt the updated progression loop gave them more reasons to keep returning.</p>
+							<h3>SUS Score</h3>
+								<p>The SUS score was used to gauge overall usability across the prototype experience. While this project is conceptual, the scoring framework helped validate that simplifying navigation and strengthening rewards would likely improve player satisfaction.</p>
+					</div>
+
+					<div class="inner">
+						<div class="sep"></div>	
+						<h2 id="outcome">Outcome</h2>
+							<h3>Expert Interview</h3>
+								<p>Insights from expert perspectives reinforced the need for a stronger live-service strategy in PTCGP. Their feedback supported the direction of combining accessibility for casual players with more structure for dedicated and competitive users.</p>
+							<h3>Competitive Analysis</h3>
+								<p>The competitive review showed that PTCGP has room to stand out by improving retention rather than simply adding more content. Better event cadence, more desirable rewards, and fewer interface barriers could make the experience feel far more complete.</p>
+							<h3>Projected Results</h3>
+								<p>If implemented, these changes could increase daily engagement, improve player satisfaction, and create stronger motivation to spend on premium options without making the game feel unfair. The concept aims to balance monetization, usability, and long-term retention.</p>
+							<h3>Reflection</h3>
+								<p>This project helped me think critically about designing for both excitement and repetition in a live-service product. It reinforced how small UX friction points, when repeated every day, can have a major impact on whether players stay invested.</p>
+					</div>
+					</div>
+
+					<div class="button-nav">
+						 <a href="../index.html" class="buttonBack">HOME</a>
+						<a href="../bat/bat.html" class="buttonBack">Next Project: BAT POSTERS</a>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Contact Me</h2>
+								<ul class="icons">
+									<li><a href="https://www.linkedin.com/in/emily-chae-600691283" target="_blank" rel="noopener noreferrer"><img src="../images/linkwme.png" alt="LinkedIn"></a></li>
+									<li><a href="mailto:emilychae.ec@gmail.com"><img src="../images/emailme.png" alt="Email"></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script>
+				document.querySelectorAll('[data-slideshow]').forEach(function (slideshow) {
+					var track = slideshow.querySelector('[data-slide-track]');
+					var slides = slideshow.querySelectorAll('.steps-slide');
+					var status = slideshow.querySelector('[data-slide-status]');
+					var prev = slideshow.querySelector('[data-slide-prev]');
+					var next = slideshow.querySelector('[data-slide-next]');
+					var index = 0;
+
+					if (!track || !slides.length || !status || !prev || !next) {
+						return;
+					}
+
+					function renderSlide() {
+						track.style.transform = 'translateX(' + (index * -100) + '%)';
+						status.textContent = (index + 1) + ' / ' + slides.length;
+					}
+
+					prev.addEventListener('click', function () {
+						index = (index - 1 + slides.length) % slides.length;
+						renderSlide();
+					});
+
+					next.addEventListener('click', function () {
+						index = (index + 1) % slides.length;
+						renderSlide();
+					});
+
+					renderSlide();
+				});
+			</script>
+
+	</body>
+</html>

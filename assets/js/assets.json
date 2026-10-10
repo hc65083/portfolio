@@ -1,0 +1,66 @@
+{
+  "podcast": 
+  {
+    "title": "Podcast Redesign",
+    "steps": [
+      {
+        "title": "Exploring iterations",
+        "description": "Inital sketches of the wordmarks.",
+        "images": [
+          {
+            "src": "../assets/images/podcast/one.jpg",
+            "alt": "Checkout wireframe with a single-page layout",
+            "caption": "Option A: all fields on one page.",
+            "span": 4
+          },
+          {
+            "src": "../assets/images/podcast/oneTwo.jpg",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "Option B: a different palette.",
+            "span": 4
+          },
+          {
+            "src": "../assets/images/podcast/two.jpg",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "Option C: a guided sequence.",
+            "span": 4
+          }
+        ]
+      },
+      {
+        "title": "Final design",
+        "description": "Explain which approach you chose and why.",
+        "images": [
+          {
+            "src": "..images/podcast/cover.png",
+            "alt": "Final checkout interface",
+            "span": 12
+          }
+        ]
+      }
+    ]
+  },
+
+  "begal": 
+  {
+    "title": "Begal",
+    "steps": [
+      {
+        "title": "Designing navigation",
+        "description": "Explain the navigation decision shown here.",
+        "images": [
+          {
+            "src": "../assets/images/begal/begalHome.jpg",
+            "alt": "Campus map showing accessible walking routes",
+            "span": 6
+          },
+          {
+            "src": "../assets/images/begal/begalAcct.jpg",
+            "alt": "Turn-by-turn directions screen",
+            "span": 6
+          }
+        ]
+      }
+    ]
+  }
+}
