@@ -3353,8 +3353,8 @@ input, select, textarea {
 }
 
 .button-nav .buttonBack,
-.button-nav .buttonNext,
-#footer .actions input[type="submit"] {
+.button-nav .buttonNext
+{
 	min-width: 100px;
 	max-width: 400px;
 	align-items: center;
@@ -3362,9 +3362,9 @@ input, select, textarea {
 	position: relative;
 	z-index: 6;
 	pointer-events: auto;
-  	padding: 1em 1em 1em 1em;
+  	padding: clamp(1vw,2vw,3vw);;
   	border: 1px solid gray;
-	font-size: clamp(12px,2vw,3vw);
+	font-size: clamp(12px,20px,3rem);
   	color: inherit;
 	text-align: center; 
   	border-radius: 5px;
@@ -3377,6 +3377,16 @@ input, select, textarea {
 	cursor: pointer;
 	text-transform: uppercase;
 	transition: color 0.2s ease;
+	margin-bottom:2vw;
+	align-items: center;
+	justify-content: center;
+	pointer-events: auto;
+  	padding: 20px;
+  	border: 1px solid gray;
+	font-size: clamp(12px,18px,3rem);
+  	color: inherit;
+	text-align: center; 
+  	border-radius: 5px;
 }
 
 #footer .actions input[type="submit"]:hover,
