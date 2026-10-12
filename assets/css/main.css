@@ -3352,13 +3352,9 @@ input, select, textarea {
 	z-index: 5;
 }
 
-button:hover  {
-		.buttonBack:hover {
-		color: #f2849e;
-		}
-	}
-
-.button-nav .buttonBack {
+.button-nav .buttonBack,
+.button-nav .buttonNext,
+#footer .actions input[type="submit"] {
 	min-width: 100px;
 	max-width: 400px;
 	align-items: center;
@@ -3374,20 +3370,18 @@ button:hover  {
   	border-radius: 5px;
 }
 
-.button-nav .buttonNext {
-	min-width: 100px;
-	max-width: 400px;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	z-index: 6;
-	pointer-events: auto;
-  	padding: 1em 1em 1em 1em;
-  	border: 1px solid gray;
-	font-size: clamp(12px,2vw,3vw);
-  	color: inherit;
-	text-align: center; 
-  	border-radius: 5px;
+#footer .actions input[type="submit"] {
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: color 0.2s ease;
+}
+
+#footer .actions input[type="submit"]:hover,
+#footer .actions input[type="submit"]:focus-visible {
+	color: #f2849e;
 }
 
 @media screen and (max-width: 736px) {
