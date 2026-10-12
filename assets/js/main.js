@@ -333,3 +333,45 @@ if (main) {
     });
   }
 }
+
+//about
+(function () {
+	var blocks = Array.from(document.querySelectorAll('.about-block'));
+	var framePending = false;
+
+	if (!blocks.length) return;
+
+	function updateFocus() {
+		var midpoint = window.innerHeight / 2;
+		var nearest = blocks[0];
+		var nearestDistance = Infinity;
+
+		blocks.forEach(function (block) {
+			var bounds = block.getBoundingClientRect();
+			var distance = Math.abs(bounds.top + bounds.height / 2 - midpoint);
+
+			if (distance < nearestDistance) {
+				nearest = block;
+				nearestDistance = distance;
+			}
+		});
+
+		blocks.forEach(function (block) {
+			block.classList.toggle('is-active', block === nearest);
+		});
+		document.documentElement.classList.add('about-focus-ready');
+		framePending = false;
+	}
+
+	function scheduleUpdate() {
+		if (framePending) return;
+		framePending = true;
+		window.requestAnimationFrame(updateFocus);
+	}
+
+	window.addEventListener('scroll', scheduleUpdate, { passive: true });
+	window.addEventListener('resize', scheduleUpdate);
+	window.addEventListener('pageshow', scheduleUpdate);
+	if (document.fonts) document.fonts.ready.then(scheduleUpdate);
+	updateFocus();
+})();

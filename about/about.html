@@ -1,18 +1,53 @@
 <!DOCTYPE HTML>
-<html>
+<html class="about-page">
 	<head>
 		<title>About Me</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
-			<style>
-				#main .inner p {
-					padding-top: clamp(2.5rem, 4vw, 5rem);
-					font-size: clamp(2.5rem, 4vw, 5rem);
-					line-height: clamp(3rem, 4vw, 5rem);
-				}
-			</style>
+		<link rel="stylesheet" href="../assets/css/about.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<style>
+			html.about-page {
+				scroll-snap-type: y proximity;
+			}
+
+			.about-block {
+				min-height: 30vh;
+				min-height: 30svh;
+				display: flex;
+				align-items: center;
+				padding-block: clamp(2.5rem, 4vw, 5rem);
+				scroll-snap-align: center;
+				transition: opacity 350ms ease;
+			}
+
+			#main .about-block p {
+				margin: 0;
+				font-size: clamp(2.5rem, 3.5vw, 4rem);
+				line-height: 1.2;
+			}
+
+			.about-focus-ready .about-block {
+				opacity: 0.3;
+			}
+
+			.about-focus-ready .about-block.is-active {
+				opacity: 1;
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				html.about-page {
+					scroll-snap-type: none;
+				}
+
+				.about-focus-ready .about-block {
+					opacity: 1;
+					transition: none;
+				}
+			}
+
+		</style>
 	</head>
 	<body class="is-preload interior-page">
 		<!-- Wrapper -->
@@ -53,14 +88,14 @@
 					<div id="main">
 						<div class="inner">
 							<h1>About Me</h1>
-							<p>Translating concepts universally. 
-							<br><br>Foundation in design, technology and psychology.  
-							<br><br>Creating intuitive, thought-provoking and accessible experiences for diverse people.
-							<br><br>Passionionate about accessibility, connection and exploring various perspectives to uncover the most effective solutions.
-							<br><br>Constantly learning as both an artist and an individual.  
-							<br><br>Research-based statistics, minute details, and solid narratives.
-							<br><br>Thoughtful planning, envisioning obstacles or possibilities and empathizing with a range of people.
-							<br><br>I believe our everyday experiences shape our ourselves and the world around us. This is why I am committed to creating designs that inform, include and empower. <br><br>
+							<div class="about-block"><p>Translating concepts universally.</p></div>
+							<div class="about-block"><p>Foundation in design, technology and psychology.</p></div>
+							<div class="about-block"><p>Creating intuitive, thought-provoking and accessible experiences for diverse people.</p></div>
+							<div class="about-block"><p>Passionionate about accessibility, connection and exploring various perspectives to uncover the most effective solutions.</p></div>
+							<div class="about-block"><p>Constantly learning as both an artist and an individual.</p></div>
+							<div class="about-block"><p>Research-based statistics, minute details, and solid narratives.</p></div>
+							<div class="about-block"><p>Thoughtful planning, envisioning obstacles or possibilities and empathizing with a range of people.</p></div>
+							<div class="about-block"><p>I believe our everyday experiences shape our ourselves and the world around us. This is why I am committed to creating designs that inform, include and empower.</p></div>
 						</div>
 					</div>
 
@@ -105,6 +140,5 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
-
 	</body>
 </html>
