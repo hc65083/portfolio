@@ -3607,18 +3607,18 @@ input, select, textarea {
 	}
 
 /* Grid */
-#case-study,
-#case-study * {
+.case-study-section,
+.case-study-section * {
   box-sizing: border-box;
 }
 
-#case-study {
+.case-study-section {
   max-width: 1440px;
   margin: 0 auto;
   padding: 64px 32px 96px;
 }
 
-#case-study h1 {
+.case-study-section h1 {
   margin: 0 0 64px;
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 500;
@@ -3626,11 +3626,11 @@ input, select, textarea {
   letter-spacing: -0.04em;
 }
 
-#case-study section + section {
+.case-study-section + .case-study-section {
   margin-top: 96px;
 }
 
-#case-study h2 {
+.case-study-section h2 {
   margin: 0 0 16px;
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 500;
@@ -3638,7 +3638,7 @@ input, select, textarea {
   letter-spacing: -0.02em;
 }
 
-#case-study section > p {
+.case-study-section > p {
   max-width: 65ch;
   margin: 0 0 32px;
   font-size: 1.125rem;
@@ -3676,15 +3676,15 @@ input, select, textarea {
 
 /* Mobile */
 @media (max-width: 700px) {
-  #case-study {
+  .case-study-section {
     padding: 40px 16px 64px;
   }
 
-  #case-study h1 {
+  .case-study-section h1 {
     margin-bottom: 48px;
   }
 
-  #case-study section + section {
+  .case-study-section + .case-study-section {
     margin-top: 56px;
   }
 

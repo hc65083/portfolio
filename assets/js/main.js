@@ -239,11 +239,9 @@ document.querySelectorAll('[data-slideshow]').forEach(function (slideshow) {
 });
 
 //grid
-function renderGrid(selector, items) {
-  const container = document.querySelector(selector);
-
+function renderGrid(container, items) {
   if (!container) {
-    throw new Error(`Grid container not found: ${selector}`);
+    throw new Error("Grid container not found.");
   }
 
   const figures = items.map(({ src, alt, caption, span = 6 }) => {
@@ -272,7 +270,7 @@ function renderGrid(selector, items) {
 
 const caseStudyDataUrl = new URL("../data/", document.currentScript.src);
 
-async function loadCaseStudy(projectId, main) {
+async function loadCaseStudy(projectId) {
   const projectUrl = new URL(`${encodeURIComponent(projectId)}.json`, caseStudyDataUrl);
   const response = await fetch(projectUrl);
 
@@ -282,26 +280,17 @@ async function loadCaseStudy(projectId, main) {
 
   const project = await response.json();
 
-  main.replaceChildren();
-  if (project.title) {
-    document.title = project.title;
+  project.sections.forEach((sectionData) => {
+    const section = document.getElementById(sectionData.id);
 
-    const title = document.createElement("h1");
-    title.textContent = project.title;
-    main.append(title);
-  }
-
-  project.sections.forEach((sectionData, index) => {
-    const section = document.createElement("section");
+    if (!section || !section.classList.contains("case-study-section")) {
+      console.warn(`Case study section not found: ${sectionData.id}`);
+      return;
+    }
 
     const heading = document.createElement("h2");
     heading.textContent = sectionData.title;
-
-    const grid = document.createElement("div");
-    grid.className = "image-grid";
-    grid.id = `section-grid-${index}`;
-
-    section.append(heading);
+    section.replaceChildren(heading);
 
     if (sectionData.description) {
       const description = document.createElement("p");
@@ -309,27 +298,22 @@ async function loadCaseStudy(projectId, main) {
       section.append(description);
     }
 
+    const grid = document.createElement("div");
+    grid.className = "image-grid";
     section.append(grid);
-    main.append(section);
-
-    renderGrid(`#${grid.id}`, sectionData.images);
+    renderGrid(grid, sectionData.images);
   });
 }
 
-const main = document.querySelector("#case-study");
+const projectId = document.body.dataset.project;
 
-if (main) {
-  const params = new URLSearchParams(window.location.search);
-  const projectId = params.get("project") ?? main.dataset.project;
-
-  if (!projectId) {
-    main.textContent = "No case study selected.";
-  } else {
-    loadCaseStudy(projectId, main).catch((error) => {
-      console.error(error);
-      main.textContent = "This case study could not be loaded.";
+if (projectId) {
+  loadCaseStudy(projectId).catch((error) => {
+    console.error(error);
+    document.querySelectorAll(".case-study-section").forEach((section) => {
+      section.textContent = "This section could not be loaded.";
     });
-  }
+  });
 }
 
 //about
