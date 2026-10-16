@@ -5,12 +5,12 @@
     "steps": [
       {
         "title": "Exploring iterations",
-        "description": "Inital sketches of the wordmarks.",
+        "description": "Inital interpretation of the sketches.",
         "images": [
           {
             "src": "../assets/images/podcast/one.jpg",
             "alt": "Checkout wireframe with a single-page layout",
-            "caption": "Option A: all fields on one page.",
+            "caption": "Option A: the first one.",
             "span": 4
           },
           {
@@ -24,17 +24,48 @@
             "alt": "Checkout wireframe divided into three steps",
             "caption": "Option C: a guided sequence.",
             "span": 4
+          },
+          {
+            "src": "../assets/images/podcast/six.png",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "Option D: a distinct hippo.",
+            "span": 4
+          },
+          {
+            "src": "../assets/images/podcast/fourTwo.jpg",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "Option E: Trying to use negative space.",
+            "span": 4
+          },
+          {
+            "src": "../assets/images/podcast/four.jpg",
+            "alt": "Final checkout interface",
+            "caption": "Option F: a distinct jaguar.",
+            "span": 4
           }
         ]
       },
       {
-        "title": "Final design",
-        "description": "Explain which approach you chose and why.",
+        "title": "Iterations Part Two",
+        "description": "Exploring other options.",
         "images": [
           {
-            "src": "..images/podcast/cover.png",
+            "src": "../assets/images/podcast/nine.png",
             "alt": "Final checkout interface",
-            "span": 12
+            "caption": "Option A: a wildlife pictogram.",
+            "span": 4
+          },
+          {
+            "src": "../assets/images/podcast/threeTwo.jpg",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "Option B: an attention-grabbing reference.",
+            "span": 4
+          },
+          {
+            "src": "../assets/images/podcast/seven.png",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "Option C: a handwriting logomark.",
+            "span": 4
           }
         ]
       }
