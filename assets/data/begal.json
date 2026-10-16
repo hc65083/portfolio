@@ -2,6 +2,7 @@
    "sections": [
       {
         "title": "Designing navigation",
+        "id": "lofi",
         "description": "Explain the navigation decision shown here.",
         "images": [
           {
@@ -13,6 +14,38 @@
             "src": "../assets/images/begal/begalAcct.jpg",
             "alt": "Turn-by-turn directions screen",
             "span": 6
+          }
+        ]
+      },
+
+      {
+        "title": "Interactive Prototypes",
+        "id": "hifi",
+        "description": "Exploring other options.",
+        "images": [
+          {
+            "src": "../assets/images/begal/begalHome.png",
+            "alt": "Final checkout interface",
+            "caption": "Option A: a wildlife pictogram.",
+            "span": 12
+          },
+          {
+            "src": "../assets/images/begal/begalLive.png",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "An attention-grabbing reference.",
+            "span": 12
+          },
+          {
+            "src": "../assets/images/begal/begalHow.png",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "Option B: an attention-grabbing reference.",
+            "span": 12
+          },
+          {
+            "src": "../assets/images/begal/begalStream.png",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "Option C: a handwriting logomark.",
+            "span": 12
           }
         ]
       }
