@@ -1,0 +1,27 @@
+{
+   "sections": [
+      {
+        "title": "User Personas",
+        "id": "personas",
+        "description": "I drafted personas and user journeys with every type of person in mind, from young tween to beauty guru.",
+        "images": [
+          {
+            "src": "../assets/images/bello/allison.jpg",
+            "alt": "Campus map showing accessible walking routes",
+            "span": 12
+          },
+          {
+            "src": "../assets/images/bello/jeanne.jpg",
+            "alt": "Turn-by-turn directions screen",
+            "span": 12
+          },
+          {
+            "src": "../assets/images/bello/lola.jpg",
+            "alt": "Turn-by-turn directions screen",
+            "span": 12
+          }
+        ]
+      }
+    ]
+  }
+  
