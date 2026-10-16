@@ -11,6 +11,11 @@
             "span": 6
           },
           {
+            "src": "../assets/images/begal/begalStream.jpg",
+            "alt": "Campus map showing accessible walking routes",
+            "span": 6
+          },
+          {
             "src": "../assets/images/begal/begalAcct.jpg",
             "alt": "Turn-by-turn directions screen",
             "span": 6
@@ -19,9 +24,37 @@
       },
 
       {
-        "title": "Interactive Prototypes",
+        "id": "brand",
+        "images": [
+          {
+            "src": "../assets/images/begal/Branding.jpg",
+            "alt": "Final checkout interface",
+            "caption": "Trying different typefaces for the logo.",
+            "span": 6
+          },
+          {
+            "src": "../assets/images/begal/begalLogos.jpg",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "AIterations of the logo.",
+            "span": 6
+          },
+          {
+            "src": "../assets/images/begal/begalLogo.jpg",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "Final logo",
+            "span": 6
+          },
+          {
+            "src": "../assets/images/begal/begalBrand.jpg",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "A style guide.",
+            "span": 6
+          }
+        ]
+      },
+
+      {
         "id": "hifi",
-        "description": "Exploring other options.",
         "images": [
           {
             "src": "../assets/images/begal/begalHome.png",
