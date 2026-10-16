@@ -1,9 +1,8 @@
-{
-  "podcast": 
-  {
-    "steps": [
+ {
+    "sections": [
       {
         "title": "Exploring iterations",
+        "id": "iterations",
         "description": "Inital interpretation of the sketches.",
         "images": [
           {
@@ -44,8 +43,10 @@
           }
         ]
       },
+
       {
         "title": "Iterations Part Two",
+        "id": "iterationsTwo",
         "description": "Exploring other options.",
         "images": [
           {
@@ -67,15 +68,11 @@
             "span": 4
           }
         ]
-      }
-    ]
-  },
+      },
 
-  "podcastTwo": 
-    {
-      "steps": [
       {
-        "title": "Exploring iterations",
+        "title": "Final mockups",
+        "id": "mockups",
         "description": "Inital interpretation of the sketches.",
         "images": [
           {
@@ -98,28 +95,5 @@
           }
         ]
       }
-      ]
-    },
-
-  "begal": 
-  {
-    "steps": [
-      {
-        "title": "Designing navigation",
-        "description": "Explain the navigation decision shown here.",
-        "images": [
-          {
-            "src": "../assets/images/begal/begalHome.jpg",
-            "alt": "Campus map showing accessible walking routes",
-            "span": 6
-          },
-          {
-            "src": "../assets/images/begal/begalAcct.jpg",
-            "alt": "Turn-by-turn directions screen",
-            "span": 6
-          }
-        ]
-      }
     ]
   }
-}

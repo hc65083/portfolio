@@ -239,7 +239,6 @@ document.querySelectorAll('[data-slideshow]').forEach(function (slideshow) {
 });
 
 //grid
-
 function renderGrid(selector, items) {
   const container = document.querySelector(selector);
 
@@ -271,50 +270,49 @@ function renderGrid(selector, items) {
   container.replaceChildren(...figures);
 }
 
+const caseStudyDataUrl = new URL("../data/", document.currentScript.src);
+
 async function loadCaseStudy(projectId, main) {
-  const response = await fetch("../assets/js/assets.json");
+  const projectUrl = new URL(`${encodeURIComponent(projectId)}.json`, caseStudyDataUrl);
+  const response = await fetch(projectUrl);
 
   if (!response.ok) {
     throw new Error(`Could not load project data: ${response.status}`);
   }
 
-  const projects = await response.json();
-
-  if (!Object.hasOwn(projects, projectId)) {
-    throw new Error(`Unknown project: ${projectId}`);
-  }
-
-  const project = projects[projectId];
+  const project = await response.json();
 
   main.replaceChildren();
-  document.title = project.title;
+  if (project.title) {
+    document.title = project.title;
 
-  const title = document.createElement("h1");
-  title.textContent = project.title;
-  main.append(title);
+    const title = document.createElement("h1");
+    title.textContent = project.title;
+    main.append(title);
+  }
 
-  project.steps.forEach((step, index) => {
+  project.sections.forEach((sectionData, index) => {
     const section = document.createElement("section");
 
     const heading = document.createElement("h2");
-    heading.textContent = step.title;
+    heading.textContent = sectionData.title;
 
     const grid = document.createElement("div");
     grid.className = "image-grid";
-    grid.id = `step-grid-${index}`;
+    grid.id = `section-grid-${index}`;
 
     section.append(heading);
 
-    if (step.description) {
+    if (sectionData.description) {
       const description = document.createElement("p");
-      description.textContent = step.description;
+      description.textContent = sectionData.description;
       section.append(description);
     }
 
     section.append(grid);
     main.append(section);
 
-    renderGrid(`#${grid.id}`, step.images);
+    renderGrid(`#${grid.id}`, sectionData.images);
   });
 }
 

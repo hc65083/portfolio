@@ -1,0 +1,21 @@
+  {
+   "sections": [
+      {
+        "title": "Designing navigation",
+        "description": "Explain the navigation decision shown here.",
+        "images": [
+          {
+            "src": "../assets/images/begal/begalHome.jpg",
+            "alt": "Campus map showing accessible walking routes",
+            "span": 6
+          },
+          {
+            "src": "../assets/images/begal/begalAcct.jpg",
+            "alt": "Turn-by-turn directions screen",
+            "span": 6
+          }
+        ]
+      }
+    ]
+  }
+  
