@@ -302,9 +302,10 @@ input, select, textarea {
 
 	#ske {
 		display: block;
-		max-width: min(500px, 100%);
+		max-width: min(600px, 100%);
 		height: auto;
-		margin: 4em auto 3em;
+		margin: 4em auto 4em;
+		margin-bottom: 5em;
 	}
 
 	#overview > h2 {
