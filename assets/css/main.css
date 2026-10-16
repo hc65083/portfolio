@@ -257,6 +257,24 @@ input, select, textarea {
 		min-width: 16rem;
 	}
 
+	.podcast-task-details {
+		display: grid;
+		grid-template-columns: minmax(0, 7fr) minmax(16rem, 3fr);
+		gap: 3em;
+		align-items: start;
+	}
+
+	.podcast-task-details #details {
+		margin: 0;
+		min-width: 0;
+	}
+
+	@media screen and (max-width: 736px) {
+		.podcast-task-details {
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+
 	#details > h2 {
 		color: #000000;
 	}
