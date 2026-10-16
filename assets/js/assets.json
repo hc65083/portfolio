@@ -72,9 +72,8 @@
   },
 
   "podcastTwo": 
-  {
-    "title": "Podcast Mockups",
-    "steps": [
+    {
+      "steps": [
       {
         "title": "Exploring iterations",
         "description": "Inital interpretation of the sketches.",
@@ -99,12 +98,11 @@
           }
         ]
       }
-    ]
-  },
+      ]
+    },
 
   "begal": 
   {
-    "title": "Begal",
     "steps": [
       {
         "title": "Designing navigation",
