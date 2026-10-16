@@ -72,6 +72,37 @@
     ]
   },
 
+  "podcastTwo": 
+  {
+    "title": "Podcast Mockups",
+    "steps": [
+      {
+        "title": "Exploring iterations",
+        "description": "Inital interpretation of the sketches.",
+        "images": [
+          {
+            "src": "../assets/images/podcast/mockup1.png",
+            "alt": "Checkout wireframe with a single-page layout",
+            "caption": "Option A: the first one.",
+            "span": 4
+          },
+          {
+            "src": "../assets/images/podcast/mockup2.png",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "Option B: a different palette.",
+            "span": 4
+          },
+          {
+            "src": "../assets/images/podcast/mockup3.png",
+            "alt": "Checkout wireframe divided into three steps",
+            "caption": "Option C: a guided sequence.",
+            "span": 4
+          }
+        ]
+      }
+    ]
+  },
+
   "begal": 
   {
     "title": "Begal",
